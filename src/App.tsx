@@ -156,7 +156,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
    {
     title: "Em breve",
     description: "Sistema de Gerenciamento de Estacionamento",
-    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidXiO0dTXvNlJlPNDMxu0IchdnfpaPCdy_geXmwyKu463y_QH9R9LPpspUCyYwmRqyROwWpCYAGnepJ2B1ttT6z5ZfjD1rkRuZaMrgac2qp9_CXD1lggQhqsAqh3xfFXVIqX2HLyrz_Wvg/s1600/Chamada+Ildo+Stars.jpg",
+    image: "https://static.wikia.nocookie.net/rlg/images/0/0d/Em-breve.jpg/revision/latest?cb=20121130185618&path-prefix=pt-br",
     link: "#",
     tags: ["Django", "API", "IA"]
   },
