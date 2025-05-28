@@ -140,13 +140,6 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
     tags: ["Python", "Django", "Styled-Components"]
   },
   {
-    title: "Conversor de Moedas",
-    description: "Conversor de moedas em tempo real com interface intuitiva",
-    image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?auto=format&fit=crop&w=800",
-    link: "https://github.com/kleitonmac/conversor-de-moedas",
-    tags: ["React", "API", "Financeiro"]
-  },
-  {
     title: "Grão & Aroma Cafeteria",
     description: "Site elegante para cafeteria com cardápio digital",
     image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800",
@@ -159,6 +152,13 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
     image: "https://www.estoquenuvem.com.br/wp-content/uploads/sites/6/2023/05/hero-devices-500x316-copy.png",
     link: "https://github.com/kleitonmac/sge",
     tags: ["Python", "Django", "Styled-Components"]
+  },
+   {
+    title: "Em breve",
+    description: "#",
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidXiO0dTXvNlJlPNDMxu0IchdnfpaPCdy_geXmwyKu463y_QH9R9LPpspUCyYwmRqyROwWpCYAGnepJ2B1ttT6z5ZfjD1rkRuZaMrgac2qp9_CXD1lggQhqsAqh3xfFXVIqX2HLyrz_Wvg/s1600/Chamada+Ildo+Stars.jpg",
+    link: "#",
+    tags: ["Django", "API", "IA"]
   },
               ].map((project, index) => (
                   <a
