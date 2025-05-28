@@ -102,7 +102,7 @@ Contrate - me
     <div className="relative" >
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-900 rounded-full blur-3xl opacity-20" > </div>
         < img
-src = "https://raw.githubusercontent.com/kleitonmac/kleitonmac.github.io/refs/heads/main/src/img/kleiton.jpg"
+src = "https://raw.githubusercontent.com/kleitonmac/port-dev/refs/heads/main/src/img/kleiton.jpg"
 alt = "perfil"
 className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto md:max-w-50"
   />
