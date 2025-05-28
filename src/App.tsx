@@ -156,7 +156,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
    {
     title: "Em breve",
     description: "Sistema de Gerenciamento de Estacionamento",
-    image: "https://static.wikia.nocookie.net/rlg/images/0/0d/Em-breve.jpg/revision/latest?cb=20121130185618&path-prefix=pt-br",
+    image: "https://www.unirio.br/propg/jornadapg/imagens/em-breve/image_view_fullscreen",
     link: "#",
     tags: ["Django", "API", "IA"]
   },
