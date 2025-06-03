@@ -156,7 +156,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
    {
     title: "Loja Nike",
     description: "Projeto Criado baseado na loja nike",
-    image: "#",
+    image: "https://github.com/kleitonmac/nike/blob/main/assets/print-projeto.png",
     link: "https://github.com/kleitonmac/nike",
     tags: ["Javascript", "CSS", "Styled-Components"]
   },         
