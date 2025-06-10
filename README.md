@@ -1,72 +1,93 @@
-💼 – Portfólio Pessoal
+🚗 Sistema de Estacionamento
 
+Este projeto é uma aplicação web desenvolvida com **Python** e **Django**, com o objetivo de gerenciar o fluxo de veículos em um estacionamento. O sistema realiza o controle de entrada e saída dos veículos, calcula o tempo de permanência e o valor a ser pago automaticamente.
 
+---
 
-Este é o portfólio pessoal de Kleiton Mac, desenvolvido para destacar suas habilidades como desenvolvedor front-end com uma experiência visual interativa e moderna.
+## 🔧 Tecnologias Utilizadas
 
-🌐 Demonstração
-🖥️ kleiton-three.vercel.app
+- Python 3.x
+- Django
+- SQLite (banco de dados padrão do Django)
+- HTML (templates)
+- CSS básico (opcional, para estilização simples)
 
+---
 
-🛠️ Tecnologias
-Next.js – Framework React para SSR
+## ✨ Funcionalidades
 
-React Three Fiber / Drei – Elementos 3D com Three.js em React
+- Registro de entrada de veículos (com data e hora automática).
+- Registro de saída com cálculo do tempo total estacionado.
+- Cálculo automático do valor a ser pago com base no tempo.
+- Listagem de veículos atualmente no estacionamento.
+- Histórico de entradas e saídas (em desenvolvimento).
 
-Tailwind CSS – Estilização moderna e responsiva
+---
 
-Framer Motion – Animações suaves
+## ⚙️ Como Executar o Projeto Localmente
 
-Vercel – Deploy rápido e otimizado
+### 1. Clone o repositório
 
-📸 Funcionalidades
-Interface 3D interativa e responsiva
-
-Scroll animado com transições suaves
-
-Seções: Home, Projetos, Sobre, Contato
-
-SEO otimizado e carregamento rápido
-
-Código modular e reutilizável
-
-📦 Instalação Local
+```bash
+git clone https://github.com/seu-usuario/estacionamento.git
+cd estacionamento
+2. Crie e ative um ambiente virtual
 bash
 Copiar
 Editar
-git clone https://github.com/kleitonmac/portfolio.git
-cd portfolio
-npm install
-npm run dev
-Acesse em: http://localhost:3000
+python -m venv venv
+Para Linux/macOS:
 
-☁️ Deploy com Vercel
-Faça login em vercel.com
-
-Clique em “New Project”
-
-Importar repositório do GitHub
-
-Configure o build como npm run build e output como .next
-
-Clique em Deploy
-
-📁 Estrutura
-arduino
+bash
 Copiar
 Editar
-portfolio/
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   └── assets/
-├── tailwind.config.js
-└── README.md
-📬 Contato
-Email: kleitonmac@gmail.com
+source venv/bin/activate
+Para Windows:
 
-GitHub: @kleitonmac
+bash
+Copiar
+Editar
+venv\Scripts\activate
+3. Instale as dependências necessárias
+bash
+Copiar
+Editar
+pip install django
+4. (Opcional) Gere o arquivo requirements.txt
+bash
+Copiar
+Editar
+pip freeze > requirements.txt
+Para instalar via requirements.txt no futuro:
 
-LinkedIn: linkedin.com/in/kleitonmac
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+5. Execute as migrações do banco de dados
+bash
+Copiar
+Editar
+python manage.py migrate
+6. Crie um superusuário para acessar o painel administrativo
+bash
+Copiar
+Editar
+python manage.py createsuperuser
+Siga as instruções no terminal para informar:
+
+Nome de usuário
+
+E-mail (opcional)
+
+Senha
+
+7. Inicie o servidor de desenvolvimento
+bash
+Copiar
+Editar
+python manage.py runserver
+8. Acesse o sistema no navegador
+Página principal: http://127.0.0.1:8000/
+
+Área administrativa: http://127.0.0.1:8000/admin
