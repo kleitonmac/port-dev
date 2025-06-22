@@ -165,7 +165,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
     description: "Sistema de Gerenciamento de Estacionamento",
     image: "https://media.istockphoto.com/id/1272324324/pt/vetorial/coming-soon-portuguese-rubber-stamp.jpg?s=1024x1024&w=is&k=20&c=JpTWHjSsBBJDUzOIu3ueopbXAIgc4GUWZ7pcmPQII7c=",
     link: "https://github.com/kleitonmac/estacionamento",
-    tags: ["Django", "API", "IA"]
+    tags: ["Django", "API", "IA","Postman"]
   },
               ].map((project, index) => (
                   <a
