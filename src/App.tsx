@@ -135,7 +135,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
   {
     title: "Consórcio Dev",
     description: "Site criado para vendas de carros",
-    image: "https://github.com/kleitonmac/carros/blob/main/img/menu.png",
+    image: "https://raw.githubusercontent.com/kleitonmac/carros/refs/heads/main/img/menu.png",
     link: "https://github.com/kleitonmac/carros",
     tags: ["Python", "Django", "Styled-Components"]
   },
