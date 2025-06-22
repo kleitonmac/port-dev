@@ -149,7 +149,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
   {
     title: "Sistema de Gerenciamento de Estoque",
     description: "Sistema de gestão de estoque desenvolvido para controlar entradas, saídas e níveis de produtos em tempo real, otimizando o fluxo de reposição e reduzindo perdas.",
-    image: "https://www.estoquenuvem.com.br/wp-content/uploads/sites/6/2023/05/hero-devices-500x316-copy.png",
+    image: "https://raw.githubusercontent.com/kleitonmac/sge/refs/heads/main/img/image.png",
     link: "https://github.com/kleitonmac/sge",
     tags: ["Python", "Django", "Styled-Components"]
   },
