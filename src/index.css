@@ -2,18 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Animação de gradiente para textos */
 @keyframes gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* Animação de flutuação */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
   100% { transform: translateY(0px); }
 }
 
+/* Texto com gradiente animado */
 .gradient-text {
   background: linear-gradient(45deg, #9333ea, #efeef0, #7a2af1);
   -webkit-background-clip: text;
@@ -23,19 +26,23 @@
   background-size: 200% 200%;
 }
 
+/* Elemento flutuando com animação */
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
+/* Efeito de hover para cartões */
 .card-hover {
   transition: all 0.3s ease;
 }
 
 .card-hover:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 25px -5px rgba(248, 247, 247, 0.1), 0 8px 10px -6px rgba(245, 245, 245, 0.1);
+  box-shadow: 0 20px 25px -5px rgba(248, 247, 247, 0.1), 
+              0 8px 10px -6px rgba(245, 245, 245, 0.1);
 }
 
+/* Borda com gradiente */
 .gradient-border {
   position: relative;
   border-radius: 0.75rem;
@@ -47,4 +54,61 @@
   background: #0f172a;
   border-radius: 0.5rem;
   color: #ffffff;
+}
+
+/* ===========================
+   MEDIA QUERIES POR DISPOSITIVO
+   =========================== */
+
+/* 📱 Smartphones pequenos (iPhone SE, Android compactos) */
+@media (max-width: 375px) {
+  /* Estilos para telas bem pequenas */
+}
+
+/* 📱 Smartphones médios (iPhone 11, Android padrão) */
+@media (min-width: 376px) and (max-width: 480px) {
+  /* Estilos para smartphones médios */
+}
+
+/* 📱 Smartphones grandes / Phablets */
+@media (min-width: 481px) and (max-width: 600px) {
+  /* Estilos para smartphones grandes */
+}
+
+/* 📄 Tablets em modo retrato */
+@media (min-width: 601px) and (max-width: 768px) {
+  /* Estilos para tablets em modo retrato */
+}
+
+/* 📄 Tablets em modo paisagem */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Estilos para tablets em modo paisagem */
+}
+
+/* 💻 Laptops e Notebooks */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  /* Estilos para notebooks */
+}
+
+/* 🖥️ Desktops Full HD */
+@media (min-width: 1367px) and (max-width: 1920px) {
+  /* Estilos para desktops */
+}
+
+/* 🖥️ Ultra-wide ou 4K */
+@media (min-width: 1921px) {
+  /* Estilos para telas ultra largas */
+}
+
+/* ✅ Mobile First – breakpoints fluidos */
+@media (min-width: 768px) {
+  /* Tablet e superior */
+}
+
+@media (min-width: 1024px) {
+  /* Notebook/Desktop */
+}
+
+@media (min-width: 1440px) {
+  /* Telas grandes */
 }
