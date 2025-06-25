@@ -79,7 +79,7 @@ function App() {
               </p>
   < div className = "flex flex-col sm:flex-row gap-4 justify-center md:justify-start" >
     <a
-                  href="../public/Curriculo_Kleiton_Macedo.docx"
+                  href="../public/Curriculo_Kleiton_Macedo.pdf"
 download
 className = "gradient-border inline-block"
   >
