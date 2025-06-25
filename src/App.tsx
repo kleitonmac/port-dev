@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, X, Facebook, Linkedin, Instagram, Github, Download, MessageCircle, Code, Rocket, Star } from 'lucide-react';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -78,7 +79,7 @@ function App() {
               </p>
   < div className = "flex flex-col sm:flex-row gap-4 justify-center md:justify-start" >
     <a
-                  href="/public/Curriculo_Kleiton_Macedo.docx"
+                  href="../public/Curriculo_Kleiton_Macedo.docx"
 download
 className = "gradient-border inline-block"
   >
