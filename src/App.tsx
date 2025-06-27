@@ -31,7 +31,7 @@ function App() {
   rel = "noopener noreferrer"
   className = "gradient-border inline-block"
     >
-    <span className="px-4 py-2 inline-block hover:text-purple-400 transition-colors" >
+    <span className="px-4 py-2 inline-block hover:text-blue-900/20 transition-colors" >
       Contatos
       </span>
       </a>
@@ -101,7 +101,7 @@ Contrate - me
   </div>
   < div className = "flex-1" >
     <div className="relative" >
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-900 rounded-full blur-3xl opacity-20" > </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full blur-3xl opacity-20" > </div>
         < img
 src = "https://raw.githubusercontent.com/kleitonmac/port-dev/refs/heads/main/src/img/kleiton.jpg"
 alt = "perfil"
@@ -126,13 +126,6 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
               < div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >
               {
                [
-  {
-    title: "One Piece",
-    description: "Projeto inspirado no universo de One Piece com elementos visuais únicos",
-    image: "https://images.unsplash.com/photo-1621478374422-35206faeddfb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "https://github.com/kleitonmac/onepiece",
-    tags: ["JavaScript", "CSS3", "Anime"]
-  },
   {
     title: "Consórcio Dev",
     description: "Site criado para vendas de carros",
