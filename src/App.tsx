@@ -10,9 +10,9 @@ function App() {
   };
 
   return (
-    <div className= "min-h-screen bg-slate-900" >
+    <div className= "min-h-screen bg-black" >
     {/* Header */ }
-    < header className = "fixed w-full bg-slate-900/80 backdrop-blur-md shadow-lg border-b border-purple-900/20 z-50" >
+    < header className = "fixed w-full bg-black backdrop-blur-md shadow-lg border-b border-gray-400 z-50" >
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between" >
         <a href="#inicio" className = "text-2xl font-bold gradient-text" >
           Kleiton
@@ -20,9 +20,9 @@ function App() {
 
   {/* Navegação de menu*/ }
   <ul className="hidden md:flex items-center space-x-8" >
-    <li><a href="#inicio" className = "text-slate-300 hover:text-purple-400 transition-colors" > Início < /a></li >
-      <li><a href="#projetos" className = "text-slate-300 hover:text-purple-400 transition-colors" > Projetos < /a></li >
-        <li><a href="#sobre" className = "text-slate-300 hover:text-purple-400 transition-colors" > Sobre < /a></li >
+    <li><a href="#inicio" className = "text-slate-300 hover:text-purple-600 transition-colors" > Início < /a></li >
+      <li><a href="#projetos" className = "text-slate-300 hover:text-purple-600 transition-colors" > Projetos < /a></li >
+        <li><a href="#sobre" className = "text-slate-300 hover:text-purple-600 transition-colors" > Sobre < /a></li >
           <li><a href="https://github.com/kleitonmac" target = "_blank" rel = "noopener noreferrer" className = "text-slate-300 hover:text-purple-400 transition-colors" > Github < /a></li >
             <li>
             <a 
@@ -31,7 +31,7 @@ function App() {
   rel = "noopener noreferrer"
   className = "gradient-border inline-block"
     >
-    <span className="px-4 py-2 inline-block hover:text-blue-900/20 transition-colors" >
+    <span className="px-4 py-2 inline-block hover:text-purple-600 transition-colors" >
       Contatos
       </span>
       </a>
@@ -48,13 +48,13 @@ function App() {
 {/* navegação mobile*/ }
 {
   isMenuOpen && (
-    <div className="md:hidden bg-slate-900/80 backdrop-blur-md border-t border-purple-900/20" >
+    <div className="md:hidden bg-black backdrop-blur-md border-t border-purple-900/20" >
       <ul className="px-4 py-2" >
-        <li><a href="#inicio" className = "block py-2 text-slate-300 hover:text-purple-400" > Início < /a></li >
-          <li><a href="#projetos" className = "block py-2 text-slate-300 hover:text-purple-400" > Projetos < /a></li >
-            <li><a href="#sobre" className = "block py-2 text-slate-300 hover:text-purple-400" > Sobre < /a></li >
-              <li><a href="https://github.com/kleitonmac" target = "_blank" rel = "noopener noreferrer" className = "block py-2 text-slate-300 hover:text-purple-400" > Github < /a></li >
-                <li><a href="https://wa.me/5527981911375" target = "_blank" rel = "noopener noreferrer" className = "block py-2 text-slate-300 hover:text-purple-400" > Contatos < /a></li >
+        <li><a href="#inicio" className = "block py-2 text-slate-300 hover:text-purple-600" > Início < /a></li >
+          <li><a href="#projetos" className = "block py-2 text-slate-300 hover:text-purple-600" > Projetos < /a></li >
+            <li><a href="#sobre" className = "block py-2 text-slate-300 hover:text-purple-600" > Sobre < /a></li >
+              <li><a href="https://github.com/kleitonmac" target = "_blank" rel = "noopener noreferrer" className = "block py-2 text-slate-300 hover:text-purple-600" > Github < /a></li >
+                <li><a href="https://wa.me/5527981911375" target = "_blank" rel = "noopener noreferrer" className = "block py-2 text-slate-300 hover:text-purple-600" > Contatos < /a></li >
                   </ul>
                   </div>
         )
@@ -62,11 +62,11 @@ function App() {
 </header>
 
 {/* inicio sessão */ }
-<section id="inicio" className = "pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-purple-900" >
-  <div className="container mx-auto px-4" >
+<section id="inicio" className = "pt-32 pb-20 bg-black" >
+  <div className="container mx-auto px-4 bg-black" >
     <div className="flex flex-col md:flex-row items-center gap-12" >
       <div className="flex-1 text-center md:text-left" >
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 text-white mb-6" >
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black text-white mb-6" >
           <Code size={ 20 } />
             < span className = "font-medium text-white" > Software Developer </span>
               </div>
@@ -81,9 +81,9 @@ function App() {
     <a
                   href="https://docs.google.com/document/d/1XOtmN-q1BlsY_-zYy8QdW4I0sF_XXJNq/edit"
 download
-className = "gradient-border inline-block"
+className = "inline-block border-2 border-purple-600 text-white bg-black font-bold py-2 px-4 rounded hover:bg-black hover:text-purple-600 transition"
   >
-  <span className="flex items-center justify-center gap-2 px-8 py-3 hover:text-purple-400 transition-colors" >
+  <span className="flex items-center justify-center gap-2 px-8  py-3 hover:text-purple-400 transition-colors" >
     <Download size={ 20 } />
                     Download CV
   </span>
@@ -101,7 +101,7 @@ Contrate - me
   </div>
   < div className = "flex-1" >
     <div className="relative" >
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full blur-3xl opacity-20" > </div>
+      <div className="absolute inset-0 bg-black" > </div>
         < img
 src = "https://raw.githubusercontent.com/kleitonmac/port-dev/refs/heads/main/src/img/kleiton.jpg"
 alt = "perfil"
@@ -117,7 +117,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
 <section id="projetos" className = "py-20 bg-white-900" >
   <div className="container mx-auto px-4" >
     <div className="text-center mb-16" >
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg--900/30 text-white mb-4" >
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full  text-white mb-4" >
         <Rocket size={ 20 } />
           < span className = "font-medium" > Projetos em Destaque </span>
             </div>
@@ -167,7 +167,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
                 href = { project.link }
                 target = "_blank"
                 rel = "noopener noreferrer"
-                className = "card-hover bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-purple-900/20"
+                className = "card-hover bg-black rounded-xl overflow-hidden shadow-lg border border-gray-500"
                   >
                   <div className="relative overflow-hidden group" >
                 <img
@@ -175,7 +175,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
                     alt = { project.title }
                     className = "w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" > </div>
+                  <div className="absolute inset-0  from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" > </div>
                   </div>
                 < div className = "p-6" >
                 <h3 className="text-xl font-bold mb-2 gradient-text" > { project.title } </h3>
@@ -185,7 +185,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
                   project.tags.map((tag, tagIndex) => (
                     <span
                         key= { tagIndex }
-                        className = "px-3 py-1 bg-purple-900/30 text-purple-400 rounded-full text-sm"
+                        className = "px-3 py-1 bg-purple-600 text-slate-300 rounded-full text-sm"
                     >
                     { tag }
                     </span>
@@ -200,10 +200,10 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
   </section>
 
 {/* Social Links */ }
-<footer className="py-12 bg-slate-800" >
+<footer className="py-12 bg-black" >
   <div className="container mx-auto px-4" >
     <div className="text-center mb-8" >
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 text-white mb-4" >
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-600 text-white mb-4" >
         <Star size={ 20 } />
           < span className = "font-medium" > Redes Sociais </span>
             </div>
@@ -215,7 +215,7 @@ target = "_blank"
 rel = "noopener noreferrer"
 className = "gradient-border"
   >
-  <span className="w-12 h-12 flex items-center justify-center text-slate-300 hover:text-purple-400" >
+  <span className="w-12 h-12 flex items-center justify-center text-white hover:text-purple-600" >
     <Facebook size={ 24 } />
       </span>
       </a>
@@ -235,7 +235,7 @@ target = "_blank"
 rel = "noopener noreferrer"
 className = "gradient-border"
   >
-  <span className="w-12 h-12 flex items-center justify-center text-slate-300 hover:text-purple-400" >
+  <span className="w-12 h-12 flex items-center justify-center text-slate-300 hover:text-purple-600" >
     <Instagram size={ 24 } />
       </span>
       </a>
@@ -245,7 +245,7 @@ target = "_blank"
 rel = "noopener noreferrer"
 className = "gradient-border"
   >
-  <span className="w-12 h-12 flex items-center justify-center text-slate-300 hover:text-purple-400" >
+  <span className="w-12 h-12 flex items-center justify-center text-slate-300 hover:text-purple-600" >
     <Github size={ 24 } />
       </span>
       </a>
