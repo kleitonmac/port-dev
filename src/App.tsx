@@ -138,7 +138,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
     description: "Site elegante para cafeteria com cardápio digital",
     image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800",
     link: "https://cafeteriagraoearoma.vercel.app/",
-    tags: ["React", "Styled-Components"]
+    tags: ["HTML","CSS","Javascript" "Styled-Components"]
   },
   {
     title: "Sistema de Gerenciamento de Estoque",
