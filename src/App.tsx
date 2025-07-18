@@ -136,7 +136,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
   {
     title: "Grão & Aroma Cafeteria",
     description: "Site elegante para cafeteria com cardápio digital",
-    image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800",
+    image: "https://images.unsplash.com/photo-1501339847302-ac426a4agit init7cbb?auto=format&fit=crop&w=800",
     link: "https://cafeteriagraoearoma.vercel.app/",
     tags: ["HTML","CSS","Javascript", "Styled-Components"]
   },
