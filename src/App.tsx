@@ -22,7 +22,6 @@ function App() {
   <ul className="hidden md:flex items-center space-x-8" >
     <li><a href="#inicio" className = "text-slate-300 hover:text-purple-600 transition-colors" > Início < /a></li >
       <li><a href="#projetos" className = "text-slate-300 hover:text-purple-600 transition-colors" > Projetos < /a></li >
-        <li><a href="#sobre" className = "text-slate-300 hover:text-purple-600 transition-colors" > Sobre < /a></li >
           <li><a href="https://github.com/kleitonmac" target = "_blank" rel = "noopener noreferrer" className = "text-slate-300 hover:text-purple-400 transition-colors" > Github < /a></li >
             <li>
             <a 
@@ -155,7 +154,7 @@ className = "relative rounded-2xl shadow-xl animate-float w-50 max-w-sm mx-auto 
     tags: ["Javascript", "CSS", "Styled-Components"]
   },         
    {
-    title: "Em breve",
+    title: "Gerenciamento de Estacionamento",
     description: "Sistema de Gerenciamento de Estacionamento",
     image: "https://raw.githubusercontent.com/kleitonmac/estacionamento/refs/heads/main/img/backend-img.png",
     link: "https://github.com/kleitonmac/estacionamento",
@@ -225,7 +224,7 @@ target = "_blank"
 rel = "noopener noreferrer"
 className = "gradient-border"
   >
-  <span className="w-12 h-12 flex items-center justify-center text-slate-300 hover:text-white-400" >
+  <span className="w-12 h-12 flex items-center justify-center text-slate-300 hover:text-purple-600" >
     <Linkedin size={ 24 } />
       </span>
       </a>
