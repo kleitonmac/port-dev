@@ -443,11 +443,11 @@ className="p-2 rounded-lg shadow-md hover:scale-105 transition"
 </p>
   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
     <a href="https://docs.google.com/document/d/1XOtmN-q1BlsY_-zYy8QdW4I0sF_XXJNq/edit" target="_blank" rel="noopener noreferrer"
-className={`inline-block border-2 px-4 py-2 rounded font-bold transition ${theme === "dark" ? "border-blue-400 text-white hover:text-blue-400" : "border-blue-600 text-gray-900 hover:text-blue-600"}`}>
+className={`inline-block border-2 px-4 py-2 rounded font-bold transition ${theme === "dark" ? "border-green-400 text-white hover:text-green-400" : "border-green-400 text-gray-900 hover:text-green-400"}`}>
   <Download size={20} /> {language === "pt" ? "Download CV" : "Download Resume"}
     </a>
     <a href="https://wa.me/5527981911375" target="_blank" rel="noopener noreferrer"
-className={`flex items-center justify-center gap-2 px-8 py-3 border-2 rounded-lg transition ${theme === "dark" ? "border-blue-400 text-white hover:bg-blue-800" : "border-blue-600 text-gray-900 hover:bg-blue-600"}`}>
+className={`flex items-center justify-center gap-2 px-8 py-3 border-2 rounded-lg transition ${theme === "dark" ? "border-white text-white hover:bg-green-500" : "border-blue-400/100 text-gray-900 hover:bg-white"}`}>
   <MessageCircle size={20} /> {language === "pt" ? "Contrate-me" : "Hire Me"}
     </a>
     </div>
