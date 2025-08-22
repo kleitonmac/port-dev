@@ -345,8 +345,8 @@ function App() {
   <button
                 onClick={onClose}
 className={`px-6 py-3 rounded-lg border-2 transition-colors ${theme === "dark"
-  ? "border-gray-600 text-gray-300 hover:border-gray-500"
-  : "border-gray-300 text-gray-700 hover:border-gray-400"
+  ? "border-gray-600 text-white hover:border-green-600"
+  : "border-gray-300 text-black hover:border-green-600"
   }`}
               >
   {language === "pt" ? "Fechar" : "Close"}
