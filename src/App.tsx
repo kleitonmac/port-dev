@@ -453,7 +453,7 @@ className={`flex items-center justify-center gap-2 px-8 py-3 border-2 rounded-lg
     </div>
     </div>
     <div className="flex-1">
-      <img src="/kleiton.jpg" alt="perfil" className="relative rounded-2xl shadow-xl w-50 max-w-sm mx-auto md:max-w-50" />
+      <img src="/perfil.jpg" alt="perfil" className="relative rounded-2xl shadow-xl w-50 max-w-sm mx-auto md:max-w-50" />
         </div>
         </div>
         </section>
