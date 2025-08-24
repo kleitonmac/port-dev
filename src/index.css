@@ -33,6 +33,51 @@
   }
 }
 
+/* Animações sequenciais para a seção de início */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Classes de animação */
 .animate-in {
   animation-fill-mode: both;
@@ -46,9 +91,51 @@
   animation: zoomIn 0.3s ease-out;
 }
 
+/* Animações sequenciais para início */
+.animate-photo {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-content {
+  animation: slideInFromRight 0.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+.animate-buttons {
+  animation: slideInFromBottom 0.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
+}
+
+.animate-tag {
+  animation: fadeInScale 0.5s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+.animate-title {
+  animation: slideInFromRight 0.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+.animate-description {
+  animation: slideInFromRight 0.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+.animate-social {
+  animation: slideInFromRight 0.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.7s;
+}
+
 /* Texto com gradiente animado */
 .gradient-text {
-  background: linear-gradient(45deg, #7651fd, #029dfd, #029dfd);
+  background: linear-gradient(45deg, #4ade80, #4ade80, #4ade80);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -241,58 +328,346 @@
 }
 
 /* ===========================
-   MEDIA QUERIES POR DISPOSITIVO
+   RESPONSIVIDADE ESPECÍFICA
    =========================== */
 
-/* 📱 Smartphones pequenos (iPhone SE, Android compactos) */
-@media (max-width: 375px) {
-  /* Estilos para telas bem pequenas */
+/* 📱 Mobile First - Base styles */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-/* 📱 Smartphones médios (iPhone 11, Android padrão) */
-@media (min-width: 376px) and (max-width: 480px) {
-  /* Estilos para smartphones médios */
+/* 📱 Smartphones pequenos (320px - 375px) */
+@media (min-width: 320px) {
+  .container {
+    max-width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  /* Ajustes para textos em telas pequenas */
+  .text-responsive {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  /* Botões mais compactos */
+  .btn-responsive {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
 }
 
-/* 📱 Smartphones grandes / Phablets */
-@media (min-width: 481px) and (max-width: 600px) {
-  /* Estilos para smartphones grandes */
+/* 📱 Smartphones médios (376px - 480px) */
+@media (min-width: 376px) {
+  .container {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .text-responsive {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  .btn-responsive {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
 }
 
-/* 📄 Tablets em modo retrato */
-@media (min-width: 601px) and (max-width: 768px) {
-  /* Estilos para tablets em modo retrato */
+/* 📱 Smartphones grandes / Phablets (481px - 600px) */
+@media (min-width: 481px) {
+  .container {
+    max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .text-responsive {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
-/* 📄 Tablets em modo paisagem */
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Estilos para tablets em modo paisagem */
+/* 📄 Tablets em modo retrato (601px - 768px) */
+@media (min-width: 601px) {
+  .container {
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  /* Grid de 2 colunas para tablets */
+  .grid-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .text-responsive {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
-/* 💻 Laptops e Notebooks */
-@media (min-width: 1025px) and (max-width: 1366px) {
-  /* Estilos para notebooks */
+/* 📄 Tablets em modo paisagem (769px - 1024px) */
+@media (min-width: 769px) {
+  .container {
+    max-width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  
+  /* Grid de 3 colunas para tablets grandes */
+  .grid-tablet-lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .text-responsive {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
 }
 
-/* 🖥️ Desktops Full HD */
-@media (min-width: 1367px) and (max-width: 1920px) {
-  /* Estilos para desktops */
+/* 💻 Laptops e Notebooks (1025px - 1366px) */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .text-responsive {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+  
+  /* Grid de 3 colunas para desktop */
+  .grid-desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-/* 🖥️ Ultra-wide ou 4K */
+/* 🖥️ Desktops Full HD (1367px - 1920px) */
+@media (min-width: 1367px) {
+  .container {
+    max-width: 1400px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  
+  .text-responsive {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+  
+  /* Grid de 4 colunas para telas grandes */
+  .grid-desktop-lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 🖥️ Ultra-wide ou 4K (1921px+) */
 @media (min-width: 1921px) {
-  /* Estilos para telas ultra largas */
+  .container {
+    max-width: 1600px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  .text-responsive {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
 }
 
-/* ✅ Mobile First – breakpoints fluidos */
+/* ===========================
+   UTILITÁRIOS RESPONSIVOS
+   =========================== */
+
+/* Espaçamentos responsivos */
+.space-responsive {
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .space-responsive {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .space-responsive {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .space-responsive {
+    gap: 2rem;
+  }
+}
+
+/* Padding responsivo */
+.padding-responsive {
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .padding-responsive {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .padding-responsive {
+    padding: 2rem;
+  }
+}
+
+/* Margin responsivo */
+.margin-responsive {
+  margin: 1rem;
+}
+
+@media (min-width: 640px) {
+  .margin-responsive {
+    margin: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .margin-responsive {
+    margin: 2rem;
+  }
+}
+
+/* ===========================
+   MELHORIAS PARA TOUCH
+   =========================== */
+
+/* Área de toque mínima para dispositivos touch */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Espaçamento entre elementos touch */
+.touch-spacing > * + * {
+  margin-left: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .touch-spacing > * + * {
+    margin-left: 1rem;
+  }
+}
+
+/* ===========================
+   OTIMIZAÇÕES PARA PERFORMANCE
+   =========================== */
+
+/* Reduzir animações em dispositivos que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Otimização para telas de alta densidade */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ===========================
+   ACESSIBILIDADE
+   =========================== */
+
+/* Foco visível para navegação por teclado */
+.focus-visible:focus {
+  outline: 2px solid #4ade80;
+  outline-offset: 2px;
+}
+
+/* Contraste melhorado para modo escuro */
+@media (prefers-color-scheme: dark) {
+  .dark-contrast {
+    color: #f3f4f6;
+    background-color: #1f2937;
+  }
+}
+
+/* ===========================
+   BREAKPOINTS FLUIDOS
+   =========================== */
+
+/* Mobile First - breakpoints fluidos */
 @media (min-width: 768px) {
   /* Tablet e superior */
+  .tablet-up {
+    display: block;
+  }
+  
+  .mobile-only {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
   /* Notebook/Desktop */
+  .desktop-up {
+    display: block;
+  }
+  
+  .tablet-only {
+    display: none;
+  }
 }
 
 @media (min-width: 1440px) {
   /* Telas grandes */
+  .large-up {
+    display: block;
+  }
+}
+
+/* Classes utilitárias para responsividade */
+.mobile-only {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+.tablet-up {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .tablet-up {
+    display: block;
+  }
+}
+
+.desktop-up {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktop-up {
+    display: block;
+  }
 }

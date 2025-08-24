@@ -229,354 +229,357 @@ function App() {
 
     return (
       <div 
-        className="fixed inset-0 z-50 flex items-center justify-center p-4"
-    onClick={onClose}
+        className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4"
+        onClick={onClose}
       >
-      {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm animate-in fade-in duration-300" />
+        {/* Backdrop */}
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm animate-in fade-in duration-300" />
 
         {/* Modal Content */}
         <div
-    className={`
-    relative w-full max-w-4xl max-h-[90vh] 
-    overflow-y-auto rounded-2xl shadow-2xl 
-    animate-in zoom-in-95 duration-300 modal-scrollbar 
-    transition-colors duration-300
-    ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"}
-  `}
-  onClick={(e) => e.stopPropagation()}
->
-
-  {/* Header */}
-  <div className="sticky top-0 z-10 flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700 bg-inherit backdrop-blur-sm">
-
-    {/* Header */}
-    <h2 className="text-2xl font-bold gradient-text">{project.title[language as keyof typeof project.title]}</h2>
-      <button
-        onClick={onClose}
-        className={`p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors`}
-      >
-        <X size={24} />
-      </button>
-    </div>
-
-{/* Content */}
-<div className="p-6">
-  {/* Image and Basic Info */}
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-    <div className="space-y-4">
-      <img 
-        src={project.image}
-        alt={project.title[language as keyof typeof project.title]}
-        className="w-full h-64 object-cover rounded-lg shadow-lg"
-      />
-  <div className="flex flex-wrap gap-2">
-  {
-    project.tags.map((tag: string, index: number) => (
-      <span key={index} className="px-3 py-1 bg-blue-500 text-white rounded-full text-sm font-medium">
-      {tag}
-      </span>
-    ))
-  }
-    </div>
-    </div>
-
-        <div className="space-y-6">
-        <div>
-        <h3 className="text-lg font-semibold mb-2 transition-colors duration-300">{language === "pt" ? "Descrição" : "Description"}</h3>
-        <p className="transition-colors duration-300">{project.description[language as keyof typeof project.description]}</p>
+          className={`
+            relative w-full max-w-4xl max-h-[95vh] sm:max-h-[90vh]
+            overflow-y-auto rounded-lg sm:rounded-2xl shadow-2xl 
+            animate-in zoom-in-95 duration-300 modal-scrollbar 
+            transition-colors duration-300
+            ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"}
+          `}
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Header */}
+          <div className="sticky top-0 z-10 flex items-center justify-between p-3 sm:p-4 lg:p-6 border-b border-gray-200 dark:border-gray-700 bg-inherit backdrop-blur-sm">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold gradient-text pr-2">{project.title[language as keyof typeof project.title]}</h2>
+            <button
+              onClick={onClose}
+              className={`p-1 sm:p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors`}
+            >
+              <X size={20} className="sm:w-6 sm:h-6" />
+            </button>
           </div>
 
-          <div>
-          <h3 className="text-lg font-semibold mb-2 transition-colors duration-300">{language === "pt" ? "Informações Adicionais" : "Additional Information"}</h3>
-            <p className="transition-colors duration-300">{project.extra[language as keyof typeof project.extra]}</p>
+          {/* Content */}
+          <div className="p-3 sm:p-4 lg:p-6">
+            {/* Image and Basic Info */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+              <div className="space-y-3 sm:space-y-4">
+                <img 
+                  src={project.image}
+                  alt={project.title[language as keyof typeof project.title]}
+                  className="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg shadow-lg"
+                />
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag: string, index: number) => (
+                    <span key={index} className="px-2 sm:px-3 py-1 bg-green-500 text-white rounded-full text-xs sm:text-sm font-medium">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-{/* Project Details */}
-<div className="grid grid-cols-2 gap-4">
-  <div className="flex items-center gap-2">
-    <Calendar size={16} className="text-blue-500" />
-      <span className="text-sm">{details.date}</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <Users size={16} className="text-blue-500" />
-            <span className="text-sm">{details.team}</span>
-              </div>
-              </div>
-              </div>
-              </div>
+              <div className="space-y-4 sm:space-y-6">
+                <div>
+                  <h3 className="text-base sm:text-lg font-semibold mb-2 transition-colors duration-300">{language === "pt" ? "Descrição" : "Description"}</h3>
+                  <p className="text-sm sm:text-base transition-colors duration-300">{project.description[language as keyof typeof project.description]}</p>
+                </div>
 
-{/* Features */}
-<div className="mb-8">
-  <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-    <Star size={20} className="text-blue-500" />
-      {language === "pt" ? "Funcionalidades" : "Features"}
-</h3>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-  {
-    details.features.map((feature: string, index: number) => (
-      <div key={index} className="flex items-center gap-2">
-      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-    <span className="text-sm">{feature}</span>
-    </div>
-    ))
-  }
-    </div>
-    </div>
+                <div>
+                  <h3 className="text-base sm:text-lg font-semibold mb-2 transition-colors duration-300">{language === "pt" ? "Informações Adicionais" : "Additional Information"}</h3>
+                  <p className="text-sm sm:text-base transition-colors duration-300">{project.extra[language as keyof typeof project.extra]}</p>
+                </div>
 
-{/* Challenges and Solutions */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-  <div>
-  <h3 className="text-lg font-semibold mb-3 text-orange-500">
-    {language === "pt" ? "Desafios" : "Challenges"}
-</h3>
-  <p className="transition-colors duration-300">{details.challenges}</p>
-    </div>
-    <div>
-    <h3 className="text-lg font-semibold mb-3 text-green-500">
-      {language === "pt" ? "Soluções" : "Solutions"}
-</h3>
-  <p className="transition-colors duration-300">{details.solutions}</p>
-    </div>
-    </div>
+                {/* Project Details */}
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                  <div className="flex items-center gap-2">
+                    <Calendar size={14} className="sm:w-4 sm:h-4 text-green-500" />
+                    <span className="text-xs sm:text-sm">{details.date}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Users size={14} className="sm:w-4 sm:h-4 text-green-500" />
+                    <span className="text-xs sm:text-sm">{details.team}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-{/* Action Buttons */}
-<div className="flex flex-col sm:flex-row gap-4 justify-end">
-  <button
+            {/* Features */}
+            <div className="mb-6 sm:mb-8">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 flex items-center gap-2">
+                <Star size={16} className="sm:w-5 sm:h-5 text-green-400" />
+                {language === "pt" ? "Funcionalidades" : "Features"}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {details.features.map((feature: string, index: number) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full"></div>
+                    <span className="text-xs sm:text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Challenges and Solutions */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+              <div>
+                <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-orange-500">
+                  {language === "pt" ? "Desafios" : "Challenges"}
+                </h3>
+                <p className="text-sm sm:text-base transition-colors duration-300">{details.challenges}</p>
+              </div>
+              <div>
+                <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-green-500">
+                  {language === "pt" ? "Soluções" : "Solutions"}
+                </h3>
+                <p className="text-sm sm:text-base transition-colors duration-300">{details.solutions}</p>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-end">
+              <button
                 onClick={onClose}
-className={`px-6 py-3 rounded-lg border-2 transition-colors ${theme === "dark"
-  ? "border-gray-600 text-white hover:border-green-600"
-  : "border-gray-300 text-black hover:border-green-600"
-  }`}
+                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg border-2 transition-colors text-sm sm:text-base ${
+                  theme === "dark"
+                    ? "border-gray-600 text-white hover:border-green-600"
+                    : "border-gray-300 text-black hover:border-green-600"
+                }`}
               >
-  {language === "pt" ? "Fechar" : "Close"}
-</button>
-  <a
-href={project.link}
-target="_blank"
-rel="noopener noreferrer"
-className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors ${theme === "dark"
-  ? "bg-blue-600 text-white hover:bg-blue-700"
-  : "bg-blue-600 text-white hover:bg-blue-700"
-  }`}
+                {language === "pt" ? "Fechar" : "Close"}
+              </button>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base ${
+                  theme === "dark"
+                    ? "bg-blue-600 text-white hover:bg-blue-700"
+                    : "bg-blue-600 text-white hover:bg-blue-700"
+                }`}
               >
-  <ExternalLink size={16} />
-{language === "pt" ? "Ver Projeto" : "View Project"}
-</a>
-  </div>
-  </div>
-  </div>
-  </div>
+                <ExternalLink size={14} className="sm:w-4 sm:h-4" />
+                {language === "pt" ? "Ver Projeto" : "View Project"}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   };
 
-return (
-  <div className={`min-h-screen theme-transition ${theme === "dark" ? "bg-black text-white" : "bg-white text-gray-900"}`}>
+  return (
+    <div className={`min-h-screen theme-transition ${theme === "dark" ? "bg-black text-white" : "bg-white text-gray-900"}`}>
+      {/* Header */}
+      <header className={`fixed w-full backdrop-blur-md shadow-lg border-b ${theme === "dark" ? "border-gray-400" : "border-gray-200"} z-50`}>
+        <nav className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between">
+          {/* Nome à esquerda */}
+          <div className="flex-shrink-0">
+            <a href="#inicio" className="text-xl sm:text-2xl font-bold gradient-text">Kleiton</a>
+          </div>
 
-    {/* Header */}
-    <header className={`fixed w-full backdrop-blur-md shadow-lg border-b ${theme === "dark" ? "border-gray-400" : "border-gray-200"} z-50`}>
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-
-        {/* Nome à esquerda */}
-        <div className="flex-shrink-0">
-          <a href="#inicio" className="text-2xl font-bold gradient-text">Kleiton</a>
-            </div>
-
-{/* Desktop nav */}
-<ul className="hidden md:flex items-center space-x-8">
-  <li><a href="#inicio" className="hover:text-blue-400 transition-colors">{language === "pt" ? "Início" : "Home"}</a></li>
-    <li><a href="#projetos" className="hover:text-blue-400 transition-colors">{language === "pt" ? "Projetos" : "Projects"}</a></li>
-      <li><a href="https://github.com/kleitonmac" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Github</a></li>
-        <li><a href="https://wa.me/5527981911375" target="_blank" rel="noopener noreferrer" className={`gradient-border px-4 py-2 ${theme === "dark" ? "hover:text-blue-400" : "hover:text-blue-400"}`}>{language === "pt" ? "Contatos" : "Contact"}</a></li>
-          <li className="flex items-center gap-4">
-            <button
+          {/* Desktop nav */}
+          <ul className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <li><a href="#inicio" className="hover:text-green-400 transition-colors text-sm xl:text-base">{language === "pt" ? "Início" : "Home"}</a></li>
+            <li><a href="#projetos" className="hover:text-green-400 transition-colors text-sm xl:text-base">{language === "pt" ? "Projetos" : "Projects"}</a></li>
+            <li><a href="https://github.com/kleitonmac" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors text-sm xl:text-base">Github</a></li>
+            <li><a href="https://wa.me/5527981911375" target="_blank" rel="noopener noreferrer" className={`gradient-border px-3 sm:px-4 py-2 text-sm xl:text-base ${theme === "dark" ? "hover:text-green-400" : "hover:text-green-400"}`}>{language === "pt" ? "Contatos" : "Contact"}</a></li>
+            <li className="flex items-center gap-3 sm:gap-4">
+              <button
                 onClick={() => setLanguage(language === "pt" ? "en" : "pt")}
-className="p-2 rounded-lg shadow-md hover:scale-105 transition"
-  >
-  {language === "pt" ? (
-    <span className="fi fi-us"></span>
+                className="p-1.5 sm:p-2 rounded-lg shadow-md hover:scale-105 transition"
+              >
+                {language === "pt" ? (
+                  <span className="fi fi-us text-sm sm:text-base"></span>
                 ) : (
-  <span className="fi fi-br"></span>
+                  <span className="fi fi-br text-sm sm:text-base"></span>
                 )}
-</button>
-  <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>{theme === "dark" ? "☀️" : "🌙"}</button>
-    </li>
-    </ul>
+              </button>
+              <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="text-lg sm:text-xl">{theme === "dark" ? "☀️" : "🌙"}</button>
+            </li>
+          </ul>
 
-{/* Mobile menu button */}
-<button className="md:hidden" onClick={toggleMenu}>{isMenuOpen?<X /> : <Menu />}</button>
-  </nav>
+          {/* Mobile menu button */}
+          <button className="lg:hidden p-1" onClick={toggleMenu}>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </nav>
 
-{/* Mobile menu */}
-{
-  isMenuOpen && (
-    <div className={`md:hidden ${theme === "dark" ? "bg-black/80" : "bg-white/80"} backdrop-blur-md`}>
-      <ul className="px-4 py-2 flex flex-col gap-2">
-        <li><a href="#inicio">{language === "pt" ? "Início" : "Home"
-}</a></li>
-  <li><a href="#projetos">{language === "pt" ? "Projetos" : "Projects"}</a></li>
-    <li><a href="#sobre">{language === "pt" ? "Sobre" : "About"}</a></li>
-      <li><a href="https://github.com/kleitonmac" target="_blank">Github</a></li>
-        <li><a href="https://wa.me/5527981911375" target="_blank">{language === "pt" ? "Contatos" : "Contact"}</a></li>
-          <li className="flex items-center gap-4 mt-2">
-            <button onClick={() => setLanguage(language === "pt" ? "en" : "pt")}>{language === "pt" ? "🇺🇸" : "🇧🇷"}</button>
-              <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>{theme === "dark" ? "☀️" : "🌙"}</button>
-                </li>
-                </ul>
-                </div>
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className={`lg:hidden ${theme === "dark" ? "bg-black/90" : "bg-white/90"} backdrop-blur-md border-t ${theme === "dark" ? "border-gray-700" : "border-gray-200"}`}>
+            <ul className="px-4 py-3 flex flex-col gap-3">
+              <li><a href="#inicio" className="block py-2 hover:text-green-400 transition-colors">{language === "pt" ? "Início" : "Home"}</a></li>
+              <li><a href="#projetos" className="block py-2 hover:text-green-400 transition-colors">{language === "pt" ? "Projetos" : "Projects"}</a></li>
+              <li><a href="https://github.com/kleitonmac" target="_blank" className="block py-2 hover:text-green-400 transition-colors">Github</a></li>
+              <li><a href="https://wa.me/5527981911375" target="_blank" className="block py-2 hover:text-green-400 transition-colors">{language === "pt" ? "Contatos" : "Contact"}</a></li>
+              <li className="flex items-center gap-4 mt-2 pt-2 border-t border-gray-300 dark:border-gray-600">
+                <button onClick={() => setLanguage(language === "pt" ? "en" : "pt")} className="text-lg">{language === "pt" ? "🇺🇸" : "🇧🇷"}</button>
+                <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="text-lg">{theme === "dark" ? "☀️" : "🌙"}</button>
+              </li>
+            </ul>
+          </div>
         )}
-</header>
+      </header>
 
-{/* Início */}
-<section id="inicio" className={`pt-32 pb-20 transition-colors duration-300 ${sectionClass}`}>
-  <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-    <div className="flex-1 text-center md:text-left">
-      <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${theme === "dark" ? "bg-blue-500/100 text-gray-100" : "bg-black text-gray-100"} mb-6`}>
-        <Code size={20} />
-          <span className="font-medium">{language === "pt" ? "Desenvolvedor de Software" : "Software Developer"}</span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">Kleiton Macedo</h1>
-              <p className="text-lg mb-8 leading-relaxed">
+      {/* Início */}
+      <section
+        id="inicio"
+        className={`pt-20 sm:pt-24 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 transition-colors duration-300 ${
+          theme === "dark" ? "bg-[#000000] text-white" : "bg-white text-gray-900"
+        }`}
+      >
+        <div className="container mx-auto px-3 sm:px-4 flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-12">
+          
+          {/* Foto do lado esquerdo */}
+          <div className="flex-1 flex justify-center order-2 lg:order-1 animate-photo">
+            <img
+              src="/perfil.jpg"
+              alt="Kleiton Macedo"
+              className="rounded-xl sm:rounded-2xl shadow-xl w-64 sm:w-72 lg:w-80 xl:w-96"
+            />
+          </div>
+
+          {/* Conteúdo do lado direito */}
+          <div className="flex-1 text-center lg:text-left order-1 lg:order-2 animate-content">
+            {/* Tag */}
+            <div
+              className={`inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 animate-tag ${
+                theme === "dark"
+                  ? "bg-green-400 text-white"
+                  : "bg-black text-white"
+              }`}
+            >
+              <span className="font-medium text-sm sm:text-base">
                 {language === "pt"
+                  ? "Desenvolvedor de Software"
+                  : "Software Developer"}
+              </span>
+            </div>
+
+            {/* Nome */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 animate-title">
+              {language === "pt" ? "Oi, eu sou" : "Hi, I'm"}{" "}
+              <span className="text-green-500">Kleiton Macedo</span>
+            </h1>
+
+            {/* Descrição */}
+            <p className="text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0 animate-description">
+              {language === "pt"
                 ? "Desenvolvedor Full-Stack apaixonado por criar experiências digitais únicas. Transformando ideias em código com criatividade e precisão."
                 : "Full-Stack Developer passionate about creating unique digital experiences. Turning ideas into code with creativity and precision."}
-</p>
-  <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-    <a href="https://docs.google.com/document/d/1XOtmN-q1BlsY_-zYy8QdW4I0sF_XXJNq/edit" target="_blank" rel="noopener noreferrer"
-className={`inline-block border-2 px-4 py-2 rounded font-bold transition ${theme === "dark" ? "border-green-400 text-white hover:text-green-400" : "border-green-400 text-gray-900 hover:text-green-400"}`}>
-  <Download size={20} /> {language === "pt" ? "Download CV" : "Download Resume"}
-    </a>
-    <a href="https://wa.me/5527981911375" target="_blank" rel="noopener noreferrer"
-className={`flex items-center justify-center gap-2 px-8 py-3 border-2 rounded-lg transition ${theme === "dark" ? "border-white text-white hover:bg-green-500" : "border-blue-400/100 text-gray-900 hover:bg-white"}`}>
-  <MessageCircle size={20} /> {language === "pt" ? "Contrate-me" : "Hire Me"}
-    </a>
-    </div>
-    </div>
-    <div className="flex-1">
-      <img src="/perfil.jpg" alt="perfil" className="relative rounded-2xl shadow-xl w-50 max-w-sm mx-auto md:max-w-50" />
-        </div>
-        </div>
-        </section>
+            </p>
 
-{/* Projetos */}
-<section 
-  id="projetos"
-className={`py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 transition-colors duration-300 ${sectionClass}`}
->
-
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
-      <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4 animate-fade-in-up ${theme === "dark" ? "bg-blue-600 text-white" : "bg-black text-gray-100"}`} style={{ animationDelay: '0.1s' }}>
-        <Rocket size={20} />
-          <span className="font-medium">{language === "pt" ? "Projetos em Destaque" : "Featured Projects"}</span>
+            {/* Redes sociais */}
+            <div className="flex justify-center lg:justify-start gap-4 sm:gap-5 mb-6 sm:mb-8 text-xl sm:text-2xl animate-social">
+              <a href="https://www.linkedin.com/in/kleitonmacedo/" className="hover:text-green-500 transition" target="_blank" rel="noopener noreferrer">
+                <Linkedin />
+              </a>
+              <a href="https://github.com/kleitonmac" className="hover:text-green-500 transition" target="_blank" rel="noopener noreferrer">
+                <Github />
+              </a>
+              <a href="https://www.instagram.com/iamkleiton/" className="hover:text-green-500 transition" target="_blank" rel="noopener noreferrer">
+                <Instagram />
+              </a>
             </div>
-            <h2 className="text-4xl font-bold animate-fade-in-up-gradient" style={{ animationDelay: '0.3s' }}>{language === "pt" ? "Meus Projetos" : "My Projects"}</h2>
-              </div>
-              <div
-className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 project-section-animate"
-style={{ animationDelay: '0.6s' }}
->
 
+            {/* Botões */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-buttons">
+              {/* Download CV */}
+              <a
+                href="https://docs.google.com/document/d/1XOtmN-q1BlsY_-zYy8QdW4I0sF_XXJNq/edit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center justify-center gap-2 border-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-bold transition text-sm sm:text-base ${
+                  theme === "dark"
+                    ? "border-green-400 text-white hover:text-green-400"
+                    : "border-green-500 text-gray-900 hover:text-green-500"
+                }`}
+              >
+                <Download size={18} className="sm:w-5 sm:h-5" />
+                {language === "pt" ? "Download CV" : "Download Resume"}
+              </a>
 
-{
-  projetos.map((project, index) => (
-    <div 
+              {/* Contrate-me */}
+              <a
+                href="https://wa.me/5527981911375"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 border-2 rounded-lg font-bold transition text-sm sm:text-base ${
+                  theme === "dark"
+                    ? "border-white text-white hover:bg-green-500"
+                    : "border-green-500 text-gray-900 hover:bg-white"
+                }`}
+              >
+                <MessageCircle size={18} className="sm:w-5 sm:h-5" />
+                {language === "pt" ? "Contrate-me" : "Hire Me"}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projetos */}
+      <section 
+        id="projetos"
+        className={`py-12 sm:py-16 lg:py-20 px-3 sm:px-4 lg:px-6 transition-colors duration-300 ${sectionClass}`}
+      >
+        <div className="container mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <div className={`inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full mb-4 animate-fade-in-up ${theme === "dark" ? "bg-green-400 text-white" : "bg-black text-white"}`} style={{ animationDelay: '0.1s' }}>
+              <Rocket size={18} className="sm:w-5 sm:h-5" />
+              <span className="font-medium text-sm sm:text-base">{language === "pt" ? "Projetos em Destaque" : "Featured Projects"}</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold animate-fade-in-up-gradient" style={{ animationDelay: '0.3s' }}>{language === "pt" ? "Meus Projetos" : "My Projects"}</h2>
+          </div>
+          
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 project-section-animate"
+            style={{ animationDelay: '0.6s' }}
+          >
+            {projetos.map((project, index) => (
+              <div 
                 key={index} 
                 className={`${cardClass} group cursor-pointer project-card-hover project-card-animate`}
-onClick={() => setOpenProject(index)}
-style={{ animationDelay: `${0.7 + index * 0.15}s` }}
+                onClick={() => setOpenProject(index)}
+                style={{ animationDelay: `${0.7 + index * 0.15}s` }}
               >
-  <div className="relative overflow-hidden">
-    <img src={project.image} alt={project.title[language as keyof typeof project.title]} className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
-      <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end`}>
-        <div className="p-4 w-full">
-          <p className="text-white text-sm line-clamp-2">{project.extra[language as keyof typeof project.extra]}</p>
-            </div>
-            </div>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2 gradient-text">{project.title[language as keyof typeof project.title]}</h3>
-                <p className={`${theme === "dark" ? "text-white" : "text-gray-800"} mb-4 line-clamp-2`}>{project.description[language as keyof typeof project.description]}</p>
-                  <div className="flex flex-wrap gap-6 mb-4">
-                  {
-                    project.tags.slice(0, 3).map((tag, tagIndex) => (
-                      <span key={tagIndex} className="px-3 py-1 bg-blue-400 text-white rounded-full text-sm">{tag}</span>
-                    ))
-                  }
-{
-  project.tags.length > 3 && (
-    <span className="px-3 py-1 bg-gray-500 text-white rounded-full text-sm">+{project.tags.length - 3}</span>
-                    )
-}
-</div>
-  <div className="flex items-center justify-between">
-    <span className="text-sm text-gray-500">{project.details[language as keyof typeof project.details].date}</span>
-      <div className="flex items-center gap-1 text-blue-500">
-        <span className="text-sm">{language === "pt" ? "Ver mais" : "View more"}</span>
-          <ExternalLink size={16} />
-            </div>
-            </div>
-            </div>
-            </div>
+                <div className="relative overflow-hidden">
+                  <img src={project.image} alt={project.title[language as keyof typeof project.title]} className="w-full h-40 sm:h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end`}>
+                    <div className="p-3 sm:p-4 w-full">
+                      <p className="text-white text-xs sm:text-sm line-clamp-2">{project.extra[language as keyof typeof project.extra]}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 gradient-text">{project.title[language as keyof typeof project.title]}</h3>
+                  <p className={`${theme === "dark" ? "text-white" : "text-gray-800"} mb-3 sm:mb-4 line-clamp-2 text-sm sm:text-base`}>{project.description[language as keyof typeof project.description]}</p>
+                  <div className="flex flex-wrap gap-2 sm:gap-3 mb-3 sm:mb-4">
+                    {project.tags.slice(0, 3).map((tag, tagIndex) => (
+                      <span key={tagIndex} className="px-2 sm:px-3 py-1 bg-green-400 text-white rounded-full text-xs sm:text-sm">{tag}</span>
+                    ))}
+                    {project.tags.length > 3 && (
+                      <span className="px-2 sm:px-3 py-1 bg-gray-500 text-white rounded-full text-xs sm:text-sm">+{project.tags.length - 3}</span>
+                    )}
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs sm:text-sm text-gray-500">{project.details[language as keyof typeof project.details].date}</span>
+                    <div className="flex items-center gap-1 text-green-400">
+                      <span className="text-xs sm:text-sm">{language === "pt" ? "Ver mais" : "View more"}</span>
+                      <ExternalLink size={14} className="sm:w-4 sm:h-4" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             ))}
-</div>
-  </div>
-  </section>
-
-{/* Modal */}
-<ProjectModal 
-        project={openProject !== null ? projetos[openProject] : null}
-isOpen={openProject !== null}
-onClose={() => setOpenProject(null)}
-      />
-
-{/* Footer */}
-<footer className={`py-12 transition-colors duration-300 ${sectionClass}`}>
-  <div className="container mx-auto px-4 text-center">
-    <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4 ${theme === "dark" ? "bg-blue-600/100 text-white" : "bg-black text-gray-100"}`}>
-      <Star size={20} />
-        <span className="font-medium">{language === "pt" ? "Redes Sociais" : "Social Media"}</span>
           </div>
-          <div className="flex justify-center gap-6">
-            <a 
-              href="https://www.facebook.com/kleiton.santosmacedo/photos_by"
-target="_blank"
-rel="noopener noreferrer"
-className="social-icon-hover animate-fade-in-up hover:text-blue-500"
-style={{ animationDelay: '0.1s' }}
-            >
-  <Facebook size={24} />
-    </a>
-    <a
-href="https://www.linkedin.com/in/kleiton-santos-macedo-8322a7235/"
-target="_blank"
-rel="noopener noreferrer"
-className="social-icon-hover animate-fade-in-up hover:text-blue-500"
-style={{ animationDelay: '0.2s' }}
-            >
-  <Linkedin size={24} />
-    </a>
-    <a
-href="https://www.instagram.com/iamkleiton/"
-target="_blank"
-rel="noopener noreferrer"
-className="social-icon-hover animate-fade-in-up hover:text-blue-500"
-style={{ animationDelay: '0.3s' }}
-            >
-  <Instagram size={24} />
-    </a>
-    <a
-href="https://github.com/kleitonmac"
-target="_blank"
-rel="noopener noreferrer"
-className="social-icon-hover animate-fade-in-up hover:text-blue-500"
-style={{ animationDelay: '0.4s' }}
-            >
-  <Github size={24} />
-    </a>
-    </div>
-    </div>
-    </footer>
+        </div>
+      </section>
+
+      {/* Modal */}
+      <ProjectModal 
+        project={openProject !== null ? projetos[openProject] : null}
+        isOpen={openProject !== null}
+        onClose={() => setOpenProject(null)}
+      />
     </div>
   );
 }
