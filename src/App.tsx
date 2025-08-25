@@ -91,6 +91,35 @@ function App() {
       }
     },
     {
+      title: { pt: "Prime Barbershop", en: "Prime Barbershop" },
+      description: { pt: "Site criado para uma barbearia", en: "Website created for a barbershop" },
+      image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80",
+      link: "https://primebarbershop.vercel.app/",
+      tags: ["Typescript", "React", "Styled-Components"],
+      extra: {
+        pt: "Esse projeto simula um sistema de barbearia com foco em performance no frontend React.",
+        en: "This project simulates a barbershop system focusing on React frontend performance."
+      },
+      details: {
+        pt: {
+          date: "2025",
+          duration: "3 meses",
+          team: "Individual",
+          features: ["Sistema de barbearia", "Frontend robusto", "Interface responsiva", "Agendamentos em tempo real"],
+          challenges: "Implementação de sistema de agendamentos e controle de horários",
+          solutions: "Utilização de React e Styled-Components para performance"
+        },
+        en: {
+          date: "2024",
+          duration: "3 months",
+          team: "Individual",
+          features: ["Consortium system", "Robust backend", "Responsive interface", "Real-time reports"],
+          challenges: "Payment system implementation and installment control",
+          solutions: "Using Django REST Framework and PostgreSQL for performance"
+        }
+      }
+    },
+    {
       title: { pt: "Grão & Aroma Cafeteria", en: "Grão & Aroma Coffee Shop" },
       description: { pt: "Site elegante para cafeteria com cardápio digital", en: "Elegant coffee shop site with digital menu" },
       image: "https://amaisd.com.br/wp-content/uploads/2023/10/cafeteriadecor.jpg",
