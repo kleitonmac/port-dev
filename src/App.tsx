@@ -95,7 +95,7 @@ function App() {
       description: { pt: "Site criado em breve", en: "Website created soon" },
       image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80",
       link: "https://primebarbershop.vercel.app/",
-      tags: ["Typescript", "React", "Styled-Components"],
+      tags: ["Typescript", "React", "MongoDB","API", "Styled-Components"],
       extra: {
         pt: "Esse projeto simula um sistema de barbearia com foco em performance no frontend React e Backend.",
         en: "This project simulates a barbershop system focusing on React frontend performance."
