@@ -508,7 +508,7 @@ function App() {
                 }`}
               >
                 <MessageCircle size={18} className="sm:w-5 sm:h-5" />
-                {language === "pt" ? "Contrate-me" : "Hire Me"}
+                {language === "pt" ? "Contate-me" : "Contact Me"}
               </a>
             </div>
           </div>
