@@ -304,13 +304,13 @@ function App() {
             {/* Features */}
             <div className="mb-6 sm:mb-8">
               <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 flex items-center gap-2">
-                <Star size={16} className="sm:w-5 sm:h-5 text-green-400" />
+                <Star size={16} className="sm:w-5 sm:h-5 text-green-600" />
                 {language === "pt" ? "Funcionalidades" : "Features"}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {details.features.map((feature: string, index: number) => (
                   <div key={index} className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-600 rounded-full"></div>
                     <span className="text-xs sm:text-sm">{feature}</span>
                   </div>
                 ))}
@@ -379,8 +379,7 @@ function App() {
           <ul className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <li><a href="#inicio" className="hover:text-green-400 transition-colors text-sm xl:text-base">{language === "pt" ? "Início" : "Home"}</a></li>
             <li><a href="#projetos" className="hover:text-green-400 transition-colors text-sm xl:text-base">{language === "pt" ? "Projetos" : "Projects"}</a></li>
-            <li><a href="https://github.com/kleitonmac" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors text-sm xl:text-base">Github</a></li>
-            <li><a href="https://wa.me/5527981911375" target="_blank" rel="noopener noreferrer" className={`gradient-border px-3 sm:px-4 py-2 text-sm xl:text-base ${theme === "dark" ? "hover:text-green-400" : "hover:text-green-400"}`}>{language === "pt" ? "Contatos" : "Contact"}</a></li>
+            <li><a href="https://kleiton-linktree.vercel.app/" target="_blank" rel="noopener noreferrer" className={`gradient-border px-3 sm:px-4 py-2 text-sm xl:text-base ${theme === "dark" ? "hover:text-green-400" : "hover:text-green-400"}`}>{language === "pt" ? "Contatos" : "Contact"}</a></li>
             <li className="flex items-center gap-3 sm:gap-4">
               <button
                 onClick={() => setLanguage(language === "pt" ? "en" : "pt")}
@@ -443,7 +442,7 @@ function App() {
             <div
               className={`inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 animate-tag ${
                 theme === "dark"
-                  ? "bg-green-400 text-white"
+                  ? "bg-green-600 text-white"
                   : "bg-black text-white"
               }`}
             >
@@ -489,7 +488,7 @@ function App() {
                 rel="noopener noreferrer"
                 className={`inline-flex items-center justify-center gap-2 border-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-bold transition text-sm sm:text-base ${
                   theme === "dark"
-                    ? "border-green-400 text-white hover:text-green-400"
+                    ? "border-green-600 text-white hover:text-green-600"
                     : "border-green-500 text-gray-900 hover:text-green-500"
                 }`}
               >
@@ -523,7 +522,7 @@ function App() {
       >
         <div className="container mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <div className={`inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full mb-4 animate-fade-in-up ${theme === "dark" ? "bg-green-400 text-white" : "bg-black text-white"}`} style={{ animationDelay: '0.1s' }}>
+            <div className={`inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full mb-4 animate-fade-in-up ${theme === "dark" ? "bg-green-600 text-white" : "bg-black text-white"}`} style={{ animationDelay: '0.1s' }}>
               <Rocket size={18} className="sm:w-5 sm:h-5" />
               <span className="font-medium text-sm sm:text-base">{language === "pt" ? "Projetos em Destaque" : "Featured Projects"}</span>
             </div>
@@ -554,7 +553,7 @@ function App() {
                   <p className={`${theme === "dark" ? "text-white" : "text-gray-800"} mb-3 sm:mb-4 line-clamp-2 text-sm sm:text-base`}>{project.description[language as keyof typeof project.description]}</p>
                   <div className="flex flex-wrap gap-2 sm:gap-3 mb-3 sm:mb-4">
                     {project.tags.slice(0, 3).map((tag, tagIndex) => (
-                      <span key={tagIndex} className="px-2 sm:px-3 py-1 bg-green-400 text-white rounded-full text-xs sm:text-sm">{tag}</span>
+                      <span key={tagIndex} className="px-2 sm:px-3 py-1 bg-green-600 text-white rounded-full text-xs sm:text-sm">{tag}</span>
                     ))}
                     {project.tags.length > 3 && (
                       <span className="px-2 sm:px-3 py-1 bg-gray-500 text-white rounded-full text-xs sm:text-sm">+{project.tags.length - 3}</span>
@@ -562,7 +561,7 @@ function App() {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-xs sm:text-sm text-gray-500">{project.details[language as keyof typeof project.details].date}</span>
-                    <div className="flex items-center gap-1 text-green-400">
+                    <div className="flex items-center gap-1 text-green-600">
                       <span className="text-xs sm:text-sm">{language === "pt" ? "Ver mais" : "View more"}</span>
                       <ExternalLink size={14} className="sm:w-4 sm:h-4" />
                     </div>

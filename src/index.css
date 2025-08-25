@@ -135,7 +135,7 @@
 
 /* Texto com gradiente animado */
 .gradient-text {
-  background: linear-gradient(45deg, #4ade80, #4ade80, #4ade80);
+  background: linear-gradient(45deg, #11C76F, #27f792, #02cf6c);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
