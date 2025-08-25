@@ -92,12 +92,12 @@ function App() {
     },
     {
       title: { pt: "Prime Barbershop", en: "Prime Barbershop" },
-      description: { pt: "Site criado para uma barbearia", en: "Website created for a barbershop" },
+      description: { pt: "Site criado em breve", en: "Website created soon" },
       image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80",
       link: "https://primebarbershop.vercel.app/",
       tags: ["Typescript", "React", "Styled-Components"],
       extra: {
-        pt: "Esse projeto simula um sistema de barbearia com foco em performance no frontend React.",
+        pt: "Esse projeto simula um sistema de barbearia com foco em performance no frontend React e Backend.",
         en: "This project simulates a barbershop system focusing on React frontend performance."
       },
       details: {
@@ -105,9 +105,9 @@ function App() {
           date: "2025",
           duration: "3 meses",
           team: "Individual",
-          features: ["Sistema de barbearia", "Frontend robusto", "Interface responsiva", "Agendamentos em tempo real"],
+          features: ["Sistema de barbearia", "Frontend robusto", "Interface responsiva", "Backend com agendamento em tempo real"],
           challenges: "Implementação de sistema de agendamentos e controle de horários",
-          solutions: "Utilização de React e Styled-Components para performance"
+          solutions: "Utilização de React, MongoDB Atlas e Styled-Components para performance"
         },
         en: {
           date: "2024",
