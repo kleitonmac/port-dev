@@ -155,7 +155,7 @@ function App() {
       title: { pt: "Loja Nike", en: "Nike Store" },
       description: { pt: "Projeto Criado baseado na loja Nike", en: "Project created based on Nike store" },
       image: "https://raw.githubusercontent.com/kleitonmac/nike/refs/heads/main/assets/print-projeto.png",
-      link: "https://github.com/kleitonmac/nike",
+      link: "https://nike-delta-sooty.vercel.app/",
       tags: ["Javascript", "CSS", "Styled-Components"],
       extra: {
         pt: "Layout inspirado na Nike Store com foco em UI moderna.",
