@@ -63,7 +63,7 @@ function App() {
   const projetos: Project[] = [
     {
       title: { pt: "Prime Barbershop", en: "Prime Barbershop" },
-      description: { pt: "Site criado em breve", en: "Website created soon" },
+      description: { pt: "Landing Pages criado para barbearia", en: "Landing Pages created for barbershop" },
       image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80",
       link: "https://primebarbershop.vercel.app/",
       tags: ["Typescript", "React", "MongoDB","API", "Styled-Components"],
