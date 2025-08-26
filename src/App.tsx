@@ -62,35 +62,6 @@ function App() {
 
   const projetos: Project[] = [
     {
-      title: { pt: "Consórcio Dev", en: "Dev Consortium" },
-      description: { pt: "Site criado para vendas de carros", en: "Website created for car sales" },
-      image: "https://raw.githubusercontent.com/kleitonmac/carros/refs/heads/main/img/menu.png",
-      link: "https://github.com/kleitonmac/carros",
-      tags: ["Python", "Django", "Styled-Components"],
-      extra: {
-        pt: "Esse projeto simula um sistema de consórcio com foco em performance no backend Django.",
-        en: "This project simulates a consortium system focusing on Django backend performance."
-      },
-      details: {
-        pt: {
-          date: "2024",
-          duration: "3 meses",
-          team: "Individual",
-          features: ["Sistema de consórcio", "Backend robusto", "Interface responsiva", "Relatórios em tempo real"],
-          challenges: "Implementação de sistema de pagamentos e controle de parcelas",
-          solutions: "Utilização de Django REST Framework e PostgreSQL para performance"
-        },
-        en: {
-          date: "2024",
-          duration: "3 months",
-          team: "Individual",
-          features: ["Consortium system", "Robust backend", "Responsive interface", "Real-time reports"],
-          challenges: "Payment system implementation and installment control",
-          solutions: "Using Django REST Framework and PostgreSQL for performance"
-        }
-      }
-    },
-    {
       title: { pt: "Prime Barbershop", en: "Prime Barbershop" },
       description: { pt: "Site criado em breve", en: "Website created soon" },
       image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80",
@@ -149,6 +120,64 @@ function App() {
       }
     },
     {
+      title: { pt: "Loja Nike", en: "Nike Store" },
+      description: { pt: "Projeto Criado baseado na loja Nike", en: "Project created based on Nike store" },
+      image: "https://raw.githubusercontent.com/kleitonmac/nike/refs/heads/main/assets/print-projeto.png",
+      link: "https://nike-delta-sooty.vercel.app/",
+      tags: ["Javascript", "CSS", "Styled-Components"],
+      extra: {
+        pt: "Layout inspirado na Nike Store com foco em UI moderna.",
+        en: "Layout inspired by Nike Store with focus on modern UI."
+      },
+      details: {
+        pt: {
+          date: "2023",
+          duration: "1 mês",
+          team: "Individual",
+          features: ["Design inspirado na Nike", "Animações CSS", "Layout responsivo", "Carrinho de compras"],
+          challenges: "Recriar a experiência visual da Nike Store",
+          solutions: "CSS avançado com Grid e Flexbox para layout preciso"
+        },
+        en: {
+          date: "2023",
+          duration: "1 month",
+          team: "Individual",
+          features: ["Nike-inspired design", "CSS animations", "Responsive layout", "Shopping cart"],
+          challenges: "Recreating the Nike Store visual experience",
+          solutions: "Advanced CSS with Grid and Flexbox for precise layout"
+        }
+      }
+    },
+     {
+      title: { pt: "Consórcio Dev", en: "Dev Consortium" },
+      description: { pt: "Site criado para vendas de carros", en: "Website created for car sales" },
+      image: "https://raw.githubusercontent.com/kleitonmac/carros/refs/heads/main/img/menu.png",
+      link: "https://github.com/kleitonmac/carros",
+      tags: ["Python", "Django", "Styled-Components"],
+      extra: {
+        pt: "Esse projeto simula um sistema de consórcio com foco em performance no backend Django.",
+        en: "This project simulates a consortium system focusing on Django backend performance."
+      },
+      details: {
+        pt: {
+          date: "2024",
+          duration: "3 meses",
+          team: "Individual",
+          features: ["Sistema de consórcio", "Backend robusto", "Interface responsiva", "Relatórios em tempo real"],
+          challenges: "Implementação de sistema de pagamentos e controle de parcelas",
+          solutions: "Utilização de Django REST Framework e PostgreSQL para performance"
+        },
+        en: {
+          date: "2024",
+          duration: "3 months",
+          team: "Individual",
+          features: ["Consortium system", "Robust backend", "Responsive interface", "Real-time reports"],
+          challenges: "Payment system implementation and installment control",
+          solutions: "Using Django REST Framework and PostgreSQL for performance"
+        }
+      }
+    },
+    {
       title: { pt: "Sistema de Gerenciamento de Estoque", en: "Stock Management System" },
       description: {
         pt: "Sistema de gestão de estoque para controlar entradas, saídas e níveis de produtos em tempo real.",
@@ -177,35 +206,6 @@ function App() {
           features: ["Stock control", "Real-time reports", "User system", "Interactive dashboard"],
           challenges: "Managing large data volumes and multiple users",
           solutions: "Scalable architecture with cache and database optimizations"
-        }
-      }
-    },
-    {
-      title: { pt: "Loja Nike", en: "Nike Store" },
-      description: { pt: "Projeto Criado baseado na loja Nike", en: "Project created based on Nike store" },
-      image: "https://raw.githubusercontent.com/kleitonmac/nike/refs/heads/main/assets/print-projeto.png",
-      link: "https://nike-delta-sooty.vercel.app/",
-      tags: ["Javascript", "CSS", "Styled-Components"],
-      extra: {
-        pt: "Layout inspirado na Nike Store com foco em UI moderna.",
-        en: "Layout inspired by Nike Store with focus on modern UI."
-      },
-      details: {
-        pt: {
-          date: "2023",
-          duration: "1 mês",
-          team: "Individual",
-          features: ["Design inspirado na Nike", "Animações CSS", "Layout responsivo", "Carrinho de compras"],
-          challenges: "Recriar a experiência visual da Nike Store",
-          solutions: "CSS avançado com Grid e Flexbox para layout preciso"
-        },
-        en: {
-          date: "2023",
-          duration: "1 month",
-          team: "Individual",
-          features: ["Nike-inspired design", "CSS animations", "Responsive layout", "Shopping cart"],
-          challenges: "Recreating the Nike Store visual experience",
-          solutions: "Advanced CSS with Grid and Flexbox for precise layout"
         }
       }
     },
