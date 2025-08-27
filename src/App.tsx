@@ -65,7 +65,7 @@ function App() {
       title: { pt: "Prime Barbershop", en: "Prime Barbershop" },
       description: { pt: "Landing Pages criado para barbearia", en: "Landing Pages created for barbershop" },
       image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80",
-      link: "https://primeshop-rho.vercel.app/",
+      link: "https://barbeariaprimeshop.vercel.app/",
       tags: ["Typescript", "React", "MongoDB","API", "Styled-Components"],
       extra: {
         pt: "Esse projeto simula um sistema de barbearia com foco em performance no frontend React e Backend.",
