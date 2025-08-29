@@ -468,7 +468,16 @@ function App() {
               <li><a href="https://github.com/kleitonmac" target="_blank" className="block py-2 hover:text-green-400 transition-colors">Github</a></li>
               <li><a href="https://wa.me/5527981911375" target="_blank" className="block py-2 hover:text-green-400 transition-colors">{language === "pt" ? "Contatos" : "Contact"}</a></li>
               <li className="flex items-center gap-4 mt-2 pt-2 border-t border-gray-300 dark:border-gray-600">
-                <button onClick={() => setLanguage(language === "pt" ? "en" : "pt")} className="text-lg">{language === "pt" ? "🇺🇸" : "🇧🇷"}</button>
+                <button
+                onClick={() => setLanguage(language === "pt" ? "en" : "pt")}
+                className="p-1.5 sm:p-2 rounded-lg shadow-md hover:scale-105 transition"
+              >
+                {language === "pt" ? (
+                  <span className="fi fi-us text-sm sm:text-base"></span>
+                ) : (
+                  <span className="fi fi-br text-sm sm:text-base"></span>
+                )}
+              </button>
                 <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="text-lg">{theme === "dark" ? "☀️" : "🌙"}</button>
               </li>
             </ul>
