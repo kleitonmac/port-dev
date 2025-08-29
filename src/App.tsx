@@ -149,6 +149,35 @@ function App() {
       }
     },
      {
+      title: { pt: "Boutiques", en: "Boutiques" },
+      description: { pt: "Projeto Criado baseado em boutiques", en: "Project created based on boutiques" },
+      image: "desenvolvimento.jpg",
+      link: "#",
+      tags: ["Javascript", "CSS", "React", "Node.js", "MongoDB", "Styled-Components"],
+      extra: {
+        pt: "Em desenvolvimento",
+        en: "In development"
+      },
+      details: {
+        pt: {
+          date: "2025",
+          duration: "3 meses",
+          team: "Individual",
+          features: ["Design inspirado na Boutique", "Animações CSS", "Layout responsivo", "Carrinho de compras"],
+          challenges: "Recriar a experiência visual da Boutique",
+          solutions: "CSS avançado com Grid e Flexbox para layout preciso"
+        },
+        en: {
+          date: "2025",
+          duration: "3 months",
+          team: "Individual",
+          features: ["Boutique-inspired design", "CSS animations", "Responsive layout", "Shopping cart"],
+          challenges: "Recreating the Boutique visual experience",
+          solutions: "Advanced CSS with Grid and Flexbox for precise layout"
+        }
+      }
+    },
+     {
       title: { pt: "Consórcio Dev", en: "Dev Consortium" },
       description: { pt: "Site criado para vendas de carros", en: "Website created for car sales" },
       image: "https://raw.githubusercontent.com/kleitonmac/carros/refs/heads/main/img/menu.png",
