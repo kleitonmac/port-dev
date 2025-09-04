@@ -3,7 +3,7 @@
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLanguage } from "./i18n/LanguageContext";
 import emailjs from "@emailjs/browser";
 import "../styles/contact-form.css";
@@ -17,6 +17,15 @@ export function ContactSection() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Initialize EmailJS with your Public Key on the client
+  useEffect(() => {
+    try {
+      emailjs.init("pTZyhJYaccnO1e2Wy");
+    } catch (err) {
+      // ignore
+    }
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
