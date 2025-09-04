@@ -25,7 +25,7 @@ export function ContactSection() {
     emailjs
       .send(
         "service_f7vdpwj",   // ✅ seu Service ID
-        "template_c4x4qab", // ✅ seu Template ID
+        "template_kleiton", // ✅ seu Template ID
         {
           from_name: formData.name,
           from_email: formData.email,
