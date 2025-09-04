@@ -24,14 +24,15 @@ export function ContactSection() {
 
     emailjs
       .send(
-        "service_f7vdpwj",   // ✅ seu Service ID
-        "template_kleiton", // ✅ seu Template ID
+        "service_hwj3yyi",
+        "template_f9lfv7l",
         {
           from_name: formData.name,
           from_email: formData.email,
+          reply_to: formData.email,
           message: formData.message,
         },
-        "z7Kgjh2E-NpAciieW" // ✅ sua Public API Key
+        "pTZyhJYaccnO1e2Wy"
       )
       .then(() => {
         alert("✅ Mensagem enviada com sucesso!");
