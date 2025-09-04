@@ -31,7 +31,7 @@ export function ContactSection() {
           from_email: formData.email,
           message: formData.message,
         },
-        "4fQQf9rsPrKbsuhoAQ9g7" // ✅ sua Public API Key
+        "pTZyhJYaccnO1e2Wy" // ✅ sua Public API Key
       )
       .then(() => {
         alert("✅ Mensagem enviada com sucesso!");
