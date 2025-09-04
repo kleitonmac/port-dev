@@ -20,10 +20,16 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
+    // Build WhatsApp message and open chat
+    const whatsappNumber = "5527981911375"; // E.164 format without '+'
+    const messagePt = `Olá! Meu nome é ${formData.name}.\nEmail: ${formData.email}\nMensagem: ${formData.message}`;
+    const messageEn = `Hello! My name is ${formData.name}.\nEmail: ${formData.email}\nMessage: ${formData.message}`;
+    const text = locale === "pt-BR" ? messagePt : messageEn;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+
     setIsSubmitting(false);
     setFormData({ name: "", email: "", message: "" });
   };
