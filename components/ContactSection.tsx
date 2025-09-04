@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { useLanguage } from "./i18n/LanguageContext";
-import emailjs from "emailjs-com"; // 👈 IMPORTANTE
+import emailjs from "@emailjs/browser";
 import "../styles/contact-form.css";
 
 export function ContactSection() {
@@ -31,7 +31,7 @@ export function ContactSection() {
           from_email: formData.email,
           message: formData.message,
         },
-        "pTZyhJYaccnO1e2Wy" // ✅ sua Public API Key
+        "4fQQf9rsPrKbsuhoAQ9g7" // ✅ sua Public API Key
       )
       .then(() => {
         alert("✅ Mensagem enviada com sucesso!");
