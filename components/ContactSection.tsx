@@ -5,39 +5,51 @@ import { MdEmail } from "react-icons/md";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { useLanguage } from "./i18n/LanguageContext";
+import emailjs from "@emailjs/browser";
 import "../styles/contact-form.css";
 
 export function ContactSection() {
-  const { t, locale } = useLanguage();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    from_name: "",
+    from_email: "",
     message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Build WhatsApp message and open chat
-    const whatsappNumber = "5527981911375"; // E.164 format without '+'
-    const messagePt = `Olá! Meu nome é ${formData.name}.\nEmail: ${formData.email}\nMensagem: ${formData.message}`;
-    const messageEn = `Hello! My name is ${formData.name}.\nEmail: ${formData.email}\nMessage: ${formData.message}`;
-    const text = locale === "pt-BR" ? messagePt : messageEn;
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    try {
+      const response = await emailjs.send(
+        "service_gmail", // seu Service ID
+        "template_kleiton", // seu Template ID
+        formData, // já contém from_name, from_email e message
+        "z7Kgjh2E-NpAciieW" // sua Public Key
+      );
 
-    window.open(url, "_blank");
+      console.log("✅ Success!", response.status, response.text);
+      alert("✅ Mensagem enviada com sucesso!");
 
-    setIsSubmitting(false);
-    setFormData({ name: "", email: "", message: "" });
+      setFormData({ from_name: "", from_email: "", message: "" });
+    } catch (error) {
+      console.error("❌ Failed...", error);
+      alert("❌ Erro ao enviar mensagem. Tente novamente.");
+    } finally {
+      setIsSubmitting(false);
+    }
+
+    console.log(formData); // debug dos dados enviados
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -46,31 +58,46 @@ export function ContactSection() {
       icon: "📧",
       label: "Email",
       value: "kdevprofissional@gmail.com",
-      link: "mailto:kdevprofissional@gmail.com" 
+      link: "mailto:kdevprofissional@gmail.com",
     },
     {
       icon: "📱",
       label: "WhatsApp",
       value: "+55 27 98191-1375",
-      link: "https://wa.me/5527981911375"
+      link: "https://wa.me/5527981911375",
     },
     {
       icon: "📍",
       label: "Location",
       value: "Espírito Santo, BR",
-      link: "#"
-    }
+      link: "#",
+    },
   ];
 
   const socialLinks = [
-  { name: "GitHub", icon: <FaGithub />, link: "https://github.com/kleitonmac/About" },
-  { name: "LinkedIn", icon: <FaLinkedin />, link: "https://www.linkedin.com/in/kleitonmacedo/" },
-  { name: "WhatsApp", icon: <FaWhatsapp />, link: "https://wa.me/5527981911375" },
-  { name: "Email", icon: <MdEmail />, link: "mailto:kdevprofissional@gmail.com" },
-];
+    {
+      name: "GitHub",
+      icon: <FaGithub />,
+      link: "https://github.com/kleitonmac/About",
+    },
+    {
+      name: "LinkedIn",
+      icon: <FaLinkedin />,
+      link: "https://www.linkedin.com/in/kleitonmacedo/",
+    },
+    { name: "WhatsApp", icon: <FaWhatsapp />, link: "https://wa.me/5527981911375" },
+    {
+      name: "Email",
+      icon: <MdEmail />,
+      link: "mailto:kdevprofissional@gmail.com",
+    },
+  ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-accent/20 to-background">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-b from-accent/20 to-background"
+    >
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -81,7 +108,9 @@ export function ContactSection() {
         >
           <h2 className="text-4xl md:text-5xl mb-6">{t("contact_title")}</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{t("contact_desc")}</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            {t("contact_desc")}
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -98,12 +127,13 @@ export function ContactSection() {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
+              {/* Nome */}
               <div>
                 <motion.input
                   type="text"
-                  name="name"
+                  name="from_name"
                   placeholder={t("contact_form_name")}
-                  value={formData.name}
+                  value={formData.from_name}
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 bg-input-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 placeholder:text-black"
@@ -111,12 +141,13 @@ export function ContactSection() {
                 />
               </div>
 
+              {/* Email */}
               <div>
                 <motion.input
                   type="email"
-                  name="email"
+                  name="from_email"
                   placeholder={t("contact_form_email")}
-                  value={formData.email}
+                  value={formData.from_email}
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 bg-input-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 placeholder:text-black"
@@ -124,6 +155,7 @@ export function ContactSection() {
                 />
               </div>
 
+              {/* Mensagem */}
               <div>
                 <motion.textarea
                   name="message"
@@ -137,6 +169,7 @@ export function ContactSection() {
                 />
               </div>
 
+              {/* Botão */}
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
@@ -171,8 +204,9 @@ export function ContactSection() {
             <div>
               <h3 className="text-2xl mb-6">{t("contact_me")}</h3>
               <p className="text-muted-foreground mb-8">
-                I'm always open to discussing new opportunities and interesting projects.
-                Feel free to reach out if you'd like to collaborate or just say hello!
+                I'm always open to discussing new opportunities and interesting
+                projects. Feel free to reach out if you'd like to collaborate or
+                just say hello!
               </p>
             </div>
 
@@ -190,7 +224,9 @@ export function ContactSection() {
                 >
                   <span className="text-2xl">{info.icon}</span>
                   <div>
-                    <div className="text-sm text-muted-foreground">{info.label}</div>
+                    <div className="text-sm text-muted-foreground">
+                      {info.label}
+                    </div>
                     <div className="text-foreground">{info.value}</div>
                   </div>
                 </motion.a>
