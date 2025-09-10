@@ -6,7 +6,6 @@ import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
 import { SkillsSection } from "./components/SkillsSection";
 import { ProjectsSection } from "./components/ProjectsSection";
-import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { LanguageProvider } from "./components/i18n/LanguageContext";
 
@@ -23,7 +22,7 @@ export default function App() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
-          <ContactSection />
+ 
         </main>
         <Footer />
       </div>
