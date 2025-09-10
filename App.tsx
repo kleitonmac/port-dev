@@ -8,6 +8,7 @@ import { SkillsSection } from "./components/SkillsSection";
 import { ProjectsSection } from "./components/ProjectsSection";
 import { Footer } from "./components/Footer";
 import { LanguageProvider } from "./components/i18n/LanguageContext";
+import { ContactSection } from "./components/ContactSection";
 
 export default function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ export default function App() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
+          <ContactSection />
  
         </main>
         <Footer />
