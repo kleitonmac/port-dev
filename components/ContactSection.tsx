@@ -108,7 +108,7 @@ export function ContactSection() {
         >
           <h2 className="text-4xl md:text-5xl mb-6">{t("contact_title")}</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-gray-200 max-w-2xl mx-auto">
             {t("contact_desc")}
           </p>
         </motion.div>
@@ -203,7 +203,7 @@ export function ContactSection() {
           >
             <div>
               <h3 className="text-2xl mb-6">{t("contact_me")}</h3>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-gray-200 mb-8">
                 I'm always open to discussing new opportunities and interesting
                 projects. Feel free to reach out if you'd like to collaborate or
                 just say hello!
