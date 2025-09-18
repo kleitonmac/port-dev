@@ -33,7 +33,7 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl mb-6">{t("about_title")}</h2>
+          <h2 className="text-4xl md:text-5xl mb-6 text-white dark:text-white">{t("about_title")}</h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
@@ -72,11 +72,11 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h3 className="text-2xl md:text-3xl">{t("about_hello")}</h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <h3 className="text-2xl md:text-3xl text-white dark:text-white">{t("about_hello")}</h3>
+            <p className="text-gray-600 dark:text-gray-200 leading-relaxed">
               {t("about_p1")}
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-200 leading-relaxed">
               {t("about_p2")}
             </p>
 
@@ -98,8 +98,8 @@ export function AboutSection() {
                   whileHover={{ scale: 1.05, y: -5 }}
                   className="text-center p-4 bg-card border border-border rounded-lg"
                 >
-                  <div className="text-2xl text-primary mb-1">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-2xl text-primary dark:text-white mb-1">{stat.value}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>

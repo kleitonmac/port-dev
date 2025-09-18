@@ -24,7 +24,7 @@ export function Footer() {
             <h3 className="text-xl mb-4 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
               Kleiton
             </h3>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-gray-600 dark:text-gray-200 mb-4">
               {t("footer_description")}
             </p>
             <div className="flex space-x-4">
@@ -56,14 +56,14 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg mb-4">{t("footer_quick_links")}</h4>
+            <h4 className="text-lg mb-4 text-white dark:text-white">{t("footer_quick_links")}</h4>
             <div className="space-y-2">
               {[t("nav_home"), t("nav_about"), t("nav_skills"), t("nav_projects"), t("nav_contact")].map((link) => (
                 <motion.a
                   key={link}
                   href={`#${link.toLowerCase()}`}
                   whileHover={{ x: 5 }}
-                  className="block text-muted-foreground hover:text-foreground transition-colors"
+                  className="block text-gray-600 dark:text-gray-200 hover:text-white dark:hover:text-white transition-colors"
                 >
                   {link}
                 </motion.a>
@@ -78,8 +78,8 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg mb-4">{t("footer_contacts")}</h4>
-            <div className="space-y-2 text-muted-foreground">
+            <h4 className="text-lg mb-4 text-white dark:text-white">{t("footer_contacts")}</h4>
+            <div className="space-y-2 text-gray-600 dark:text-gray-200">
               <p>kdevprofissional@gmail.com</p>
               <p>+55 27 98191-1375</p>
               <p>Espírito Santo, BR</p>
@@ -93,7 +93,7 @@ export function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-          className="border-t border-border mt-8 pt-8 text-center text-muted-foreground"
+          className="border-t border-border mt-8 pt-8 text-center text-gray-600 dark:text-gray-200"
         >
           <p>© {currentYear} Kleiton. {t("footer_rights")}</p>
         </motion.div>

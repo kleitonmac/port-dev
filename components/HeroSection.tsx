@@ -130,7 +130,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-8"
+            className="text-xl md:text-2xl text-gray-600 dark:text-gray-200 mb-8"
           >
             {t("hero_subtitle")}
 
@@ -165,7 +165,7 @@ export function HeroSection() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border-2 border-green-500 text-foreground rounded-full transition-all duration-300 hover:text-green-600 hover:border-green-600"
+              className="px-8 py-3 border-2 border-green-500 text-gray-700 dark:text-gray-200 rounded-full transition-all duration-300 hover:text-green-600 hover:border-green-600"
             >
               Download CV
             </motion.a>

@@ -90,9 +90,9 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl mb-6">{t("projects_title")}</h2>
+          <h2 className="text-4xl md:text-5xl mb-6 text-white dark:text-white">{t("projects_title")}</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{t("projects_desc")}</p>
+          <p className="text-gray-600 dark:text-gray-200 max-w-2xl mx-auto">{t("projects_desc")}</p>
         </motion.div>
 
         {/* Project grid */}
@@ -124,8 +124,8 @@ export function ProjectsSection() {
                   />
                 </div>
                 <div className=" p-6 flex flex-col flex-grow mx-auto">
-                  <h3 className="text-xl font-semibold mb-2 text-center px-4">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                  <h3 className="text-xl font-semibold mb-2 text-center px-4 text-white dark:text-white">{project.title}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-200 mb-4 flex-grow">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">

@@ -42,9 +42,9 @@ export function SkillsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl mb-6">{t("skills_title")}</h2>
+          <h2 className="text-4xl md:text-5xl mb-6 text-white dark:text-white">{t("skills_title")}</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{t("skills_desc")}</p>
+          <p className="text-gray-600 dark:text-gray-200 max-w-2xl mx-auto">{t("skills_desc")}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -81,7 +81,7 @@ export function SkillsSection() {
                     {skill.icon}
                   </motion.div>
                   
-                  <h3 className="text-xl mb-4">{skill.category}</h3>
+                  <h3 className="text-xl mb-4 text-white dark:text-white">{skill.category}</h3>
                   
                   <div className="space-y-3">
                     {skill.technologies.map((tech, techIndex) => (
@@ -98,7 +98,7 @@ export function SkillsSection() {
                           animate={{ scale: [1, 1.2, 1] }}
                           transition={{ duration: 2, repeat: Infinity, delay: techIndex * 0.2 }}
                         />
-                        <span className="text-sm text-muted-foreground">{tech}</span>
+                        <span className="text-sm text-gray-600 dark:text-gray-200">{tech}</span>
                       </motion.div>
                     ))}
                   </div>
