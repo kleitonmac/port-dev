@@ -29,16 +29,6 @@ export function ProjectsSection() {
     },
     {
       id: 3,
-      title: "Alana boutique",
-      description: t("project_alana_boutique_desc"),
-      technologies: ["Prisma", "Node", "CSS", "Jsx", "React", "Styled-Components"],
-      image:
-        "https://raw.githubusercontent.com/kleitonmac/boutique/refs/heads/main/public/resume.png",
-      link: "https://boutiquelb.vercel.app/",
-      github: "https://github.com/kleitonmac",
-    },
-    {
-      id: 4,
       title: "Loja Nike",
       description: t("project_nike_store_desc"),
       technologies: ["Javascript", "CSS", "Styled-Components"],
@@ -48,7 +38,7 @@ export function ProjectsSection() {
       github: "https://github.com/kleitonmac/nike",
     },
     {
-      id: 5,
+      id: 4,
       title: "Inventory Management System",
       description: t("project_inventory_system_desc"),
       technologies: ["Python", "Django", "Styled-Components"],
@@ -58,7 +48,7 @@ export function ProjectsSection() {
       github: "https://github.com/kleitonmac/sge",
     },
     {
-      id: 6,
+      id: 5,
       title: "Consórcio Dev",
       description: t("project_consorcio_dev_desc"),
       technologies: ["Python", "Django", "Styled-Components"],
@@ -68,7 +58,7 @@ export function ProjectsSection() {
       github: "https://github.com/kleitonmac/carros",
     },
     {
-      id: 7,
+      id: 6,
       title: "Parking Management System",
       description: t("project_parking_system_desc"),
       technologies: ["Django", "API", "AI", "Postman"],
