@@ -30,7 +30,7 @@ export function ProjectsSection() {
     {
       id: 3,
       title: "Dashboard Kdev",
-      description: t("project_admin_dashboard"),
+      description: t("Dashboard KDev: um painel moderno e intuitivo para gerenciar projetos e monitorar implantações, métricas e desempenho de forma centralizada e eficiente."),
       technologies: ["Javascript", "CSS", "React","UI/UX","Styled-Components"],
       image:
         "https://raw.githubusercontent.com/kleitonmac/admin-dashboard/refs/heads/main/print.png",
