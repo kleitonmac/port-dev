@@ -29,6 +29,16 @@ export function ProjectsSection() {
     },
     {
       id: 3,
+      title: "Dashboard Kdev",
+      description: t("project_admin_dashboard"),
+      technologies: ["Javascript", "CSS", "React","UI/UX","Styled-Components"],
+      image:
+        "https://raw.githubusercontent.com/kleitonmac/admin-dashboard/refs/heads/main/print.png",
+      link: "https://dashboard-kdev.vercel.app/",
+      github: "https://github.com/kleitonmac/admin-dashboard",
+    },
+    {
+      id: 4,
       title: "Loja Nike",
       description: t("project_nike_store_desc"),
       technologies: ["Javascript", "CSS", "Styled-Components"],
