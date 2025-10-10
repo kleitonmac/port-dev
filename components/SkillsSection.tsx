@@ -42,7 +42,7 @@ export function SkillsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl mb-6 text-white dark:text-white">{t("skills_title")}</h2>
+          <h2 className="text-4xl md:text-5xl mb-6 text-gray-600 dark:text-white">{t("skills_title")}</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-200 max-w-2xl mx-auto">{t("skills_desc")}</p>
         </motion.div>
