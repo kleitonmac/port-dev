@@ -33,7 +33,7 @@ export function ProjectsSection() {
       description: t("Dashboard KDev: um painel moderno e intuitivo para gerenciar projetos e monitorar implantações, métricas e desempenho de forma centralizada e eficiente."),
       technologies: ["Javascript", "CSS", "React","UI/UX","Styled-Components"],
       image:
-        "https://raw.githubusercontent.com/kleitonmac/admin-dashboard/refs/heads/main/print.png",
+        "/dashboard-kdev.png",
       link: "https://dashboard-kdev.vercel.app/",
       github: "https://github.com/kleitonmac/admin-dashboard",
     },
