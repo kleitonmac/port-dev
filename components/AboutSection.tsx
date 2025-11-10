@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { useLanguage } from "./i18n/LanguageContext";
-import profileImage from "../assets/1cd13e42de1bf03aca97ac8897a7b009dbfade74.png";
+import profileImage from "../assets/terno.png";
 
 export function AboutSection() {
   const { t } = useLanguage();

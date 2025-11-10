@@ -9,7 +9,7 @@ export function ProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: "Prime Barbershop",
+      title: "Barbearia Prime",
       description: t("project_prime_barbershop_desc"),
       technologies: ["TypeScript", "React", "MongoDB", "API", "Styled-Components"],
       image:
