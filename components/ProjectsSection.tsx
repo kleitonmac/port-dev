@@ -14,10 +14,10 @@ export function ProjectsSection() {
       technologies: ["TypeScript", "React", "MongoDB", "API", "Styled-Components"],
       image:
         "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80",
-      link: "https://barbeariaprime.vercel.app/",
+      link: "https://novoestilo.vercel.app/",
       github: "https://github.com/kleitonmac",
     },
-    {
+    { 
       id: 2,
       title: "Grão & Aroma Cafeteria",
       description: t("project_grao_aroma_desc"),
