@@ -11,7 +11,7 @@ export function ProjectsSection() {
       id: 1,
       title: "Barbearia Novo Estilo",
       description: t("project_prime_barbershop_desc"),
-      technologies: ["TypeScript", "React", "MongoDB", "API", "CRUD","Painel Adm", "Figma","Styled-Components"],
+      technologies: ["TypeScript", "React", "MongoDB", "API", "CRUD","Painel Adm", "Figma","Node","Styled-Components"],
       image:
         "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80",
       link: "https://novoestilo.vercel.app/",
