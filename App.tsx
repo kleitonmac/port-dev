@@ -12,7 +12,7 @@ import { ContactSection } from "./components/ContactSection";
 
 export default function App() {
   useEffect(() => {
-    document.title = "Kleiton";
+    document.title = "Kleiton | Portifólio";
   }, []);
   return (
     <LanguageProvider>
